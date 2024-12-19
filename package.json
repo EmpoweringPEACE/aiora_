@@ -7,7 +7,8 @@
     "build": "tsup --format esm --dts",
     "start": "tsc && node --loader ts-node/esm src/index.ts",
     "start:service:all": "pm2 start pnpm --name=\"all\" --restart-delay=3000 --max-restarts=10 -- run start:all",
-    "stop:service:all": "pm2 stop all"
+    "stop:service:all": "pm2 stop all",
+    "get-reddit-token": "node scripts/get-reddit-token.mjs"
   },
   "dependencies": {
     "@ai16z/adapter-postgres": "v0.1.4-alpha.3",
@@ -24,6 +25,8 @@
     "@ai16z/plugin-solana": "v0.1.4-alpha.3",
     "@ai16z/plugin-starknet": "v0.1.4-alpha.3",
     "better-sqlite3": "^11.5.0",
+    "express": "^4.21.1",
+    "open": "^9.1.0",
     "readline": "^1.3.0",
     "ws": "^8.18.0",
     "yargs": "17.7.2"
